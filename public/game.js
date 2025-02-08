@@ -85,3 +85,7 @@ document.querySelectorAll('.btn').forEach(btn => {
     socket.emit("move", {row, col, player: playerName});
   })
 })
+
+socket.on("playersCount", (count) => {
+  document.getElementById("liveCount").innerText = count;
+})

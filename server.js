@@ -6,7 +6,7 @@ const path = require('path');
 
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 const server = http.createServer(app);
 
@@ -102,6 +102,8 @@ io.on("connection", (socket) => {
 
     io.emit("updateBoard", {board: game.board, turn: game.turn, result: winner});
   })
+
+  io.emit("playersCount", io.engine.clientsCount);
 
 })
 

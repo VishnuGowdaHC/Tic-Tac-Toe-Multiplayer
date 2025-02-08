@@ -11,7 +11,10 @@
 </head>
 <body>
   <section class="main">
-    <h1>Tic-Tac-Toe</h1>
+    <h2>Tic-Tac-Toe</h2>
+    <span id="liveCount">
+      <div id="spot"></div>
+      <br>0</span>
     <section id="getUser">
       <input id="userName" type="text" placeholder="Create username">
       <button id="playBtn">PLAY</button>
@@ -44,6 +47,7 @@
     <p id="draw">DRAW</p>
 
   </section>
+
 </body>
 <script src="/socket.io/socket.io.js"></script>
 <script src="game.js"></script>
