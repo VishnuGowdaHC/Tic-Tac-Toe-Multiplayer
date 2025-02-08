@@ -1,0 +1,128 @@
+body{
+  background-color: rgb(26, 25, 25);
+  font-family: "Press Start 2p", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 65%;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 20%;
+  font-size: 2.2rem;
+  color: aquamarine;
+}
+
+#findUser {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10px;
+  padding-right: 20px;
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 2px;
+  border-color: rgb(203, 203, 203);
+  margin-right: 5px;
+}
+
+#playBtn{
+  margin: 0px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-style: solid;
+  border-radius: 7px;
+  border-color: rgb(31, 65, 54);
+  font-weight: 900;
+  color: rgb(87, 171, 144);
+  background-color: rgb(0, 0, 0);
+}
+
+#playBtn:hover {
+  opacity: 90%;
+}
+#playBtn:active {
+  opacity: 50%;
+}
+
+#result{
+  color: rgb(5, 255, 59);
+}
+
+#draw{
+  color: rgb(104, 104, 104);
+}
+
+#role {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 100%;
+  color: aquamarine;
+}
+
+#getUser {
+  margin-top: 10%;
+  display: flex;
+  margin-bottom: 10%;
+}
+
+
+#boardCont {
+  margin-top: 5%;
+  margin-bottom: 10%;  
+}
+#board{
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px; /* Adjust gap size as needed */
+  max-width: 300px; /* Set max width for responsiveness */
+  margin: auto;
+}
+
+.btn{
+  background-color: rgb(38, 38, 38);
+  color: rgb(140, 137, 137);
+  border: none;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(73, 74, 74);
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#valueCont{
+  margin-top: 10%;
+  font-size: 0.6rem;
+  color:rgb(243, 243, 243);
+}
+
+#value{
+  font-size: 0.9rem;
+  color: aquamarine;
+}
+
+#whosTurn{
+  margin-top: 10%;
+  font-size: 0.6rem;
+  color:rgb(243, 243, 243);
+}
+
