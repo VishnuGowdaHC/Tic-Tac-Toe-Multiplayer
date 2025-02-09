@@ -52,19 +52,16 @@ io.on("connection", (socket) => {
         return board[i][0]; //return X or O
       }
     }
-    
     //Checks coloumn
     for(let j = 0; j < 3; j++){
       if(board[0][j] && board[0][j]===board[1][j] && board[1][j]===board[2][j]){
         return board[0][j]; //return X or O
       }
     }
-
     //Checks diagonal
     if(board[0][0]&&board[0][0]===board[1][1] && board[1][1] === board[2][2]){
       return board[0][0];   //return X or O
     }
-
     //Checks anti-diagonal
     if(board[0][2]&&board[0][2]===board[1][1] && board[1][1] === board[2][0]){
       return board[0][2];   //return X or O
@@ -92,10 +89,34 @@ io.on("connection", (socket) => {
     let winner;
     if(checkWinner(game.board) === "X"){
       winner = "X";
+      setTimeout(() => {
+        game.board = [  
+          ["", "", ""],  
+          ["", "", ""],  
+          ["", "", ""]  
+        ];
+        game.turn = "X";
+      }, 2000);
     } else if (checkWinner(game.board) === "O"){
       winner = "O";
+      setTimeout(() => {
+        game.board = [  
+          ["", "", ""],  
+          ["", "", ""],  
+          ["", "", ""]  
+        ];
+        game.turn = "X";
+      }, 2000);
     } else if (checkWinner(game.board) === "draw") {
       winner = "draw";
+      setTimeout(() => {
+        game.board = [  
+          ["", "", ""],  
+          ["", "", ""],  
+          ["", "", ""]  
+        ];
+        game.turn = "X";
+      }, 2000);
     } else {
       winner = null;
     }

@@ -76,7 +76,13 @@ socket.on("updateBoard", ({board, turn, result}) => {
       drawHTML.style.display = "none";
       winHTML.style.display = "none";
   }
-})
+
+  if(result){
+    setTimeout(() => {
+      document.querySelectorAll('.btn').forEach(cell => cell.innerText = "");
+    }, 2000);
+  }
+});
 
 document.querySelectorAll('.btn').forEach(btn => {
   btn.addEventListener("click", () => {
@@ -87,5 +93,5 @@ document.querySelectorAll('.btn').forEach(btn => {
 })
 
 socket.on("playersCount", (count) => {
-  document.getElementById("liveCount").innerText = count;
+  document.getElementById("liveCount").innerText = "Online: " + count;
 })
