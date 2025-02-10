@@ -17,12 +17,7 @@ body{
   margin-right: 10%;
 }
 
-#main-2{
-  display: flex;
-  flex-direction: column;
- 
-  height: 100vh;
-}
+
 
 h2 {
   margin-top: 20%;
@@ -147,86 +142,3 @@ h2 {
   font-size: 0.7rem;
 }
 
-#msgWrapper {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; 
-  margin-left: 0%;
-  padding-top: 50%;
-  padding-bottom: 50%;
-  padding-left: 10px;
-  padding-right: 10px;
-  overflow-x: auto;
-}
-
-.topBox {
-  background-color: rgb(21, 21, 21); 
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px 10px 0px 0px;
-}
-
-#chatSwitch{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 8px;
-  padding-right: 8px;
-  color: #666464;
-  background-color: #0f0f0f;
-  border-style: solid;
-  border-color: #252627;
-  border-radius: 5px;
-}
-
-#chatWrapper {
-  flex-grow: 1; 
-  overflow-y: auto; 
-  background-color: rgb(21, 21, 21); 
-  padding: 10px;
-}
-
-#chatArea {
-  flex-grow: 1; 
-  color: #f0f0f0;
-  font-family: "Source Code Pro", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-#sendWrapper {
-  display: flex;
-  padding: 10px;
-  background-color: rgb(21, 21, 21); 
-  border-radius: 0px 0px 10px 10px;
-}
-
-#chatArea p{
-  font-size: 0.9rem;
-  margin: 5px;
-}
-
-#sendWrapper input[type="text"] { 
-  background-color: #2a2929;
-  color: white;
-  padding: 10px;
-  border: 1px solid #404142;
-  border-radius: 10px 0px 0px 5px; 
-}
-
-#sendWrapper button {
-  padding: 7px;
-  border: 0px solid #ffffff;
-  border-radius: 0 5px 10px 0; /* Rounded corners */
-  background-color: aquamarine; /* Button color */
-  
-  cursor: pointer;
-}
-
-#sendWrapper button img {
-  width: 30px; /* Adjust the size as needed */
-  height: auto;
-}
-
-#sendWrapper button:hover {
-  background-color: #6b6969; /* Darker color on hover */
-}
