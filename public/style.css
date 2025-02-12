@@ -93,8 +93,8 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 5px; /* Adjust gap size as needed */
-  max-width: 300px; /* Set max width for responsiveness */
+  gap: 5px; 
+  max-width: 300px; 
   margin: auto;
 }
 
@@ -166,5 +166,27 @@ h2 {
 }
 
 
+@keyframes slide-up-and-grow {
+  0% {
+    bottom: 10%;
+    font-size: 1em;
+    opacity: 1;
+  }
+  50% {
+    font-size: 2em;
+  }
+  100% {
+    bottom: 60%;
+    font-size: 3em;
+    opacity: 0;
+  }
+}
 
+#broadcastEmoji{
+  position: fixed;
+  bottom: 0;
+  left: 80%;
+  animation: slide-up-and-grow 2s linear infinite;
+  padding: 10px;
+}
 

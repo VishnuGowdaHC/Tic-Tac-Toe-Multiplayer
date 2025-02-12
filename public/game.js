@@ -95,3 +95,19 @@ document.querySelectorAll('.btn').forEach(btn => {
 socket.on("playersCount", (count) => {
   document.getElementById("liveCount").innerText = "Online: " + count;
 })
+
+
+document.querySelectorAll('.emoji').forEach(emoji => {
+  emoji.addEventListener("click", () => {
+    let selectedEmoji = emoji.innerText
+    console.log(selectedEmoji);
+    socket.emit("emoji", selectedEmoji);
+  })
+})
+
+socket.on("updateEmoji", emoji => {
+  document.getElementById('broadcastEmoji').innerText = emoji;
+  setTimeout(() => {
+    document.getElementById('broadcastEmoji').innerText = "";
+  }, 1000)
+})

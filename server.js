@@ -67,7 +67,7 @@ io.on("connection", (socket) => {
       return board[0][2];   //return X or O
     } 
 
-    //Convert 2d array into 1d array then checks if its filled 
+    //Convert 2d array into 1d array then check if its filled 
     return board.flat().includes("") ? null : "draw";
   }
 
@@ -75,7 +75,7 @@ io.on("connection", (socket) => {
     //Find the player from playingArray [] 
     let game = playingArray.find(g => g.p1.p1name === player || g.p2.p2name === player);
     
-    //Validate if player exist, if cells filled and player turn
+    //Validate if player exist, if cells r filled and player turn
     if (!game) return console.log("Game not found for player:", player);
     if (game.board[row][col] !== "") return console.log("Cell already occupied");
     if ((game.turn === "X" && game.p1.p1name !== player) || (game.turn === "O" && game.p2.p2name !== player)) {
@@ -125,6 +125,15 @@ io.on("connection", (socket) => {
   })
 
   io.emit("playersCount", io.engine.clientsCount);
+  
+  socket.on("emoji", emoji => {
+    console.log("this is server "+emoji)
+    io.emit("updateEmoji", emoji);
+  })
+
+  socket.on('disconnect', () => {
+    console.log('A user disconnected');
+  });
 
 })
 
