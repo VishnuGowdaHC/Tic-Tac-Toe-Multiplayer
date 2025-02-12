@@ -109,5 +109,5 @@ socket.on("updateEmoji", emoji => {
   document.getElementById('broadcastEmoji').innerText = emoji;
   setTimeout(() => {
     document.getElementById('broadcastEmoji').innerText = "";
-  }, 1000)
+  }, 1500);
 })
